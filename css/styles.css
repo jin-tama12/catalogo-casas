@@ -1,0 +1,268 @@
+/* Style general */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; 
+  color: #4a4a4a; 
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  background-color: #6a1b9a;
+  color: white;
+}
+
+/* Navbar */
+nav {
+  background-color: #8e24aa; 
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.nav-menu li {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px 30px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-menu li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Sección de productos */
+#productos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  text-align: center;
+  grid-auto-rows: auto;
+}
+
+.producto {
+  background-color: #6a1b9a; 
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+  color: white; 
+}
+
+.producto:hover {
+  transform: scale(1.05);
+}
+
+.producto img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.producto h3 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.producto p {
+  color: #ffffff;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.producto .precio-anterior {
+  text-decoration: line-through;
+  color: #c7c7c7;
+  font-size: 14px;
+}
+
+.producto .precio-actual {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff80ab; /
+}
+
+.producto button {
+  background-color: #ff80ab; 
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.producto button:hover {
+  background-color: #f48fb1; 
+  color: #6a1b9a; 
+}
+
+.producto .ubicacion {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.producto .ubicacion:hover {
+  background-color: #555;
+}
+
+/* footer */
+footer {
+  background-color: #6a1b9a; 
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* Estilos del mapa */
+.mapa {
+  flex: 1;
+  padding: 20px;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* MEDIA QUERY para mobile */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #8e24aa; /* Morado claro */
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    padding: 10px 0;
+    align-items: center;
+  }
+
+  .nav-menu.show {
+    display: flex;
+    top: 270px;
+  }
+
+  .nav-menu li {
+    text-align: center;
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  #productos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .producto {
+    background-color: #6a1b9a;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+  }
+
+  .producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .producto h3 {
+    color: white;
+  }
+
+  .producto button {
+    background-color: #ff80ab;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+
+  .producto button:hover {
+    background-color: #f48fb1;
+    color: #6a1b9a;
+  }
+
+  .producto .precio-anterior {
+    text-decoration: line-through;
+    color: gray;
+  }
+
+  .producto p {
+    color: #fff;
+    font-size: 14px;
+    margin: 5px 0;
+  }
+
+  .mapa {
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mapa iframe {
+    height: 250px;
+    width: 250px;
+    max-width: 350px;
+  }
+}

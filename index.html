@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CasaNova</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- React Babel -->
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="headercomponent"></div>
+    <div id="navbarcomponent"></div>
+    <main>
+      <p>
+        "Bienvenido a CasaNova, tu tienda confiable de teléfonos móviles.
+        Contamos con los modelos más recientes de las mejores marcas, desde
+        smartphones de alta gama hasta opciones accesibles. Explora nuestra
+        tienda y encuentra el celular ideal para ti."
+      </p>
+
+      <!-------Filtros y ordenamiento------->
+      <label for="filtrar">Filtrar por:</label>
+      <select id="filtrar">
+        <option value="Todos">Todos</option>
+        <option value="Apartamento">Apartamento</option>
+        <option value="Casa">Casa</option>
+        <option value="Lote">Lote</option>
+      </select>
+
+      <label for="ordenar">Ordenar por:</label>
+      <select id="ordenar">
+        <option value="Menor">Menor a mayor precio</option>
+        <option value="Mayor">Mayor a menor precio</option>
+      </select>
+
+      <!------Productos------->
+      <section id="productos"></section>
+    </main>
+
+    <div id="footercomponent"></div>
+
+    <!-- SCRIPTS -->
+    <script type="text/babel" src="js/home.js"></script>
+    <script type="text/babel" src="js/propertycard.js"></script>
+    <script>
+      document
+        .querySelector(".menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector(".nav-menu").classList.toggle("show");
+        });
+    </script>
+  </body>
+</html>
